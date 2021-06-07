@@ -1,0 +1,490 @@
+  
+ <script src="jquery-3.5.1.min.js"></script>
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" id="home">Local Weather</a>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container-fluid text-center">
+    <div class="row" id="slider">
+      <div class="col-md-12">
+        <div class="swiper-container">  
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <div class="row text-center">
+                <div class="col-md-12"><h2 id="day1" class="day"></h2></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12"><div id="icon1" class="img-responsive"></div></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12"><p id="temp1" class="temp"></p></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-6 col-xs-6">
+                  <p id="main1"></p>
+                  <p id="humidity1"></p>
+                  <p id="speed1" class="speed"></p>
+                  <p id="location1" class="location"></p>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <span id="current-unit-button"></span>
+                  <p id="dayNum1" class="dayNum"></p>
+                  <p id="month1" class="month"></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="row text-center">
+                <div class="col-md-12"><h2 id="day2" class="day"></h2></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12"><p id="icon2"></p></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12"><p id="temp2" class="temp"></p></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-6 col-xs-6">
+                  <p id="main2"></p>
+                  <p id="humidity2"></p>
+                  <p id="speed2" class="speed"></p>
+                  <p id="location2" class="location"></p>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <span id="day2-unit-button"></span>
+                  <p id="dayNum2" class="dayNum"></p>
+                  <p id="month2" class="month"></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div class="row text-center">
+                <div class="col-md-12"><h2 id="day3" class="day"></h2></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12"><p id="icon3"></p></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12"><p id="temp3" class="temp"></p></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-6 col-xs-6">
+                  <p id="main3"></p>
+                  <p id="humidity3"></p>
+                  <p id="speed3" class="speed"></p>
+                  <p id="location3" class="location"></p>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <span id="day3-unit-button"></span>
+                  <p id="dayNum3" class="dayNum"></p>
+                  <p id="month3" class="month"></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="row text-center">
+                <div class="col-md-12"><h2 id="day4" class="day"></h2></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12"><p id="icon4"></p></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12"><p id="temp4" class="temp"></p></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-6 col-xs-6">
+                  <p id="main4"></p>
+                  <p id="humidity4"></p>
+                  <p id="speed4" class="speed"></p>
+                  <p id="location4" class="location"></p>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <span id="day4-unit-button"></span>
+                  <p id="dayNum4" class="dayNum"></p>
+                  <p id="month4" class="month"></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="row text-center">
+                <div class="col-md-12"><h2 id="day5" class="day"></h2></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12"><span id="icon5"></span></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-12"><p id="temp5" class="temp"></p></div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-6 col-xs-6">
+                  <p id="main5"></p>
+                  <p id="humidity5"></p>
+                  <p id="speed5" class="speed"></p>
+                  <p id="location5" class="location"></p>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                  <span id="day5-unit-button"></span>
+                  <p id="dayNum5" class="dayNum"></p>
+                  <p id="month5" class="month"></p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End swiper-wrapper -->
+          <div class="swiper-pagination"></div>
+        </div> <!-- End swiper-container -->
+      </div> <!-- End Col -->
+    </div> <!-- End Row -->
+    <footer id="footer" class="row text-center">
+      <div class="col-md-12 col-xs-12">
+       <p>Designed and created by: <a href="https://www.freecodecamp.com/jeffparagas" target="_blank">Jeffrey Paragas</a></p>
+      </div>
+    </footer>
+  </div> <!-- End Container -->
+<style>@import: url("https://fonts.googleapis.com/css?family=Rajdhani:300|Roboto");
+
+#slider {
+  background-color: white;
+  color: white;
+}
+
+.swiper-slide {
+  width: 22em;
+  height: 44em;
+  border-radius: 2em;
+  padding: 2em;
+  background: #6CB4DC; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right top, #9778BC, #6CB4DC); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top right, #9778BC, #6CB4DC); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top right, #9778BC, #6CB4DC); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top right, #9778BC, #6CB4DC); /* Standard syntax */
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.day {
+  font-family: 'Roboto', sans-serif;
+  margin-top: -0.2em;
+  font-size: 3em;
+}
+
+.dayNum {
+  font-size: 3em;
+  margin-top: .5em;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.month {
+  font-size: 2em;
+  margin-top: -1em;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.temp{
+  font-size: 6em;
+}
+
+.img-responsive {
+  height: 15em;
+  width; 15em;
+  margin: 0 auto;
+}
+
+.unit-button {
+  border: .2em solid white;
+  background-color: #8097CD;
+  width: 6em;
+  color: white;
+}
+
+#footer {
+  padding-top: 12em;
+}
+
+#home {
+  padding-left: 2em;
+}</style>
+<script>  
+    
+    $(document).ready(function(){
+    $.ajaxSetup({cache: false});
+    
+    // get current longitude and latitude for location
+    var json = "http://freegeoip.net/json/";
+    $.getJSON(json, function(jsonLocationdata){
+      latitude = JSON.stringify(jsonLocationdata.latitude);
+      longitude = JSON.stringify(jsonLocationdata.longitude);
+
+    /* Global Variables */
+    var api = "&appid=0235d6f0e32973288c2992fedb291a71";
+    var currentDate = new Date();
+    var currentTime = currentDate.getTime();
+    var counter = 0;
+    var icon = "";
+    var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    var monthsArr = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    var units = 'F';
+    var buttonUnit = 'Imperial';
+    /* End Global Variables */
+      
+    //get current weather at current time
+    $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=imperial" + api, function(jsonCurrentWeatherData){
+      $.getJSON("http://api.openweathermap.org/data/2.5/forecast?lat=" + latitude + "&lon=" + longitude + "&units=imperial" + api, function(jsonForecastWeatherData){
+      
+      function setCurrentDate(){
+        currentDate = new Date();
+        day = "Today";
+        month = currentMonth(currentDate.getMonth());
+        year = currentDate.getFullYear();
+        date = currentDate.getDate();
+      }
+        
+      function setForecastDate(milliseconds){
+        forecastDate = new Date(milliseconds);
+        day = currentDay(forecastDate.getDay());
+        month = currentMonth(forecastDate.getMonth());
+        year = forecastDate.getFullYear();
+        date = forecastDate.getDate();
+      }
+      
+      function nextDate(counter){
+        var newDay = (currentTime/1000);
+        for(var i = 0; i < counter; i++){
+          newDay += 86400;
+        }
+        return (newDay * 1000);
+      }
+      
+      function currentDay(val){
+        for(var i = 0; i < days.length; i++){
+          if(i == val){
+            return days[i];
+          }
+        }
+      }
+      
+      function currentMonth(val){
+        for(var i = 0; i < monthsArr.length; i++){
+          if(i == val){
+            return monthsArr[i];
+          }
+        }
+      }
+   
+      /* 
+         loops through entire jsonForecastWeatherData list with a value of list
+         and compares dates (dt) to use with setForecastWeatherVariables(i)
+      */
+      function getCounter(){
+        var newTime = (currentTime) + 86400000
+        $.each(jsonForecastWeatherData.list, function(key, value){
+          var currentDateInList = value.dt;
+          if((newTime/1000) > currentDateInList){
+            counter++;
+          }else {
+            counter = counter;
+          } 
+        });
+          return counter;
+       }
+      
+      // Sets all the current weather variables from jsonCurrentWeatherData
+      function setCurrentWeatherVariables(){
+        lon = jsonCurrentWeatherData.coord.lon;
+        lat = jsonCurrentWeatherData.coord.lat;
+        main = jsonCurrentWeatherData.weather[0].main;
+        description = jsonCurrentWeatherData.weather[0].description;
+        temp = Math.floor(jsonCurrentWeatherData.main.temp);
+        humidity = jsonCurrentWeatherData.main.humidity;
+        pressure = jsonCurrentWeatherData.main.pressure;
+        speed = jsonCurrentWeatherData.wind.speed;
+        country = jsonCurrentWeatherData.sys.country;
+        city = jsonCurrentWeatherData.name;
+      }
+      
+      // Sets all the forecast weather variables from jsonForecastWeatherData
+      function setForecastWeatherVariables(i){
+        lon = jsonForecastWeatherData.city.coord.lon;
+        lat = jsonForecastWeatherData.city.coord.lat;
+        main = jsonForecastWeatherData.list[i].weather[0].main;
+        description = jsonForecastWeatherData.list[i].weather[0].description;
+        temp = Math.floor(jsonForecastWeatherData.list[i].main.temp);
+        humidity = jsonForecastWeatherData.list[i].main.humidity;
+        pressure = jsonForecastWeatherData.list[i].main.pressure;
+        speed = jsonForecastWeatherData.list[i].wind.speed;
+        country = jsonForecastWeatherData.city.country;
+        city = jsonForecastWeatherData.city.name;
+      }
+      
+      function setIcon(){
+        switch(main.toLowerCase()){
+          case "clouds":
+            icon = '<img src="https://res.cloudinary.com/dnalyjwkn/image/upload/v1477471681/cloudy_xthm3q.png" class="img-responsive">';
+            break;
+          case "drizzle":
+            icon = '<img src="https://res.cloudinary.com/dnalyjwkn/image/upload/v1477471681/rain-10_jlypj2.png" class="img-responsive">';
+            break;
+          case "rain":
+            icon = '<img src="https://res.cloudinary.com/dnalyjwkn/image/upload/v1477471682/rain-4_j4bx3k.png" class="img-responsive">';
+            break;
+          case "snow":
+            icon = '<img src="https://res.cloudinary.com/dnalyjwkn/image/upload/v1477471683/snowflake-1_y1mte7.png" class="img-responsive">';
+            break;
+          case "thunderstorm":
+            break;
+          case "clear":
+            icon = '<img src="https://res.cloudinary.com/dnalyjwkn/image/upload/v1477471685/sun_uoywvb.png" class="img-responsive">';
+            break;
+        }
+      }
+      
+      function setHTMLelements(i){
+        $("#day" + i).html(day);
+        $("#icon" + i).html(icon);
+        $("#temp" + i).html(temp + '&deg' + units);
+        eval("forecastTemp" + i + " = " + temp);
+        $("#main" + i).html(main + '<br>' + description);
+        $("#speed" + i).html('Winds: ' + Math.round(speed) + ' mph');
+        $("#humidity" + i).html('humidity: ' + humidity + '%');
+        $("#dayNum" + i).html(date);
+        $("#location" + i).html(city + ', ' + country);
+        $("#month" + i).html(month);
+        $("#current-unit-button").html('<button class="btn btn-default unit-button">'+ buttonUnit +'</button>');
+        $("#day" + i + "-unit-button").html('<button class="btn btn-default unit-button">'+ buttonUnit +'</button>');
+      }
+      
+      function getForecastElements(){
+        for(var i = 1; i < 5; i++){
+          setForecastWeatherVariables(getCounter());
+          setForecastDate(nextDate(i));
+          setIcon(main);
+          setHTMLelements(i + 1);
+        }
+      }
+        
+      function convertToC(val){
+        return Math.floor((val - 32) / 1.8);
+      }
+        
+      function convertToKMH(val){
+        return Math.floor(val * 1.609344);
+      }
+      var bool = true;
+      $("#current-unit-button").on('click', function() {
+        if(bool){
+          units = 'C';
+          $('.unit-button').html("Metric");
+          $("#temp1").html(convertToC(Math.floor(jsonCurrentWeatherData.main.temp)) + '&deg' + units);
+          $("#speed1").html('Winds: ' + convertToKMH(Math.round(speed)) + ' km/h');
+          bool = false;
+        } else {
+          units = 'F';
+          $('.unit-button').html("Imperial");
+          $("#temp1").html(Math.floor(jsonCurrentWeatherData.main.temp) + '&deg' + units);
+          $("#speed1").html('Winds: ' + Math.round(speed) + ' mph');
+          bool = true;
+        }
+      });
+      
+      $("#day2-unit-button").on('click', function(val) {
+        $(this).toggleClass("active");
+        if(bool){
+          units = 'C';
+          $('.unit-button').html("Metric");
+          $("#temp2").html(convertToC(forecastTemp2) + '&deg' + units);
+          $("#speed2").html('Winds: ' + convertToKMH(Math.round(speed)) + ' km/h');
+          bool = false;
+        } else {
+          units = 'F';
+          $('.unit-button').html("Imperial");
+          $("#temp2").html(forecastTemp2 + '&deg' + units);
+          $("#speed2").html('Winds: ' + Math.round(speed) + ' mph');
+          bool = true;
+        }
+      });
+        
+       $("#day3-unit-button").on('click', function(val) {
+        if(bool){
+          units = 'C';
+          $('.unit-button').html("Metric");
+          $("#temp3").html(convertToC(forecastTemp3) + '&deg' + units);
+          $("#speed3").html('Winds: ' + convertToKMH(Math.round(speed)) + ' km/h');
+          bool = false;
+        } else {
+          units = 'F';
+          $('.unit-button').html("Imperial");
+          $("#temp3").html(forecastTemp3 + '&deg' + units);
+          $("#speed3").html('Winds: ' + Math.round(speed) + ' mph');
+          bool = true;
+        }
+      });
+        
+       $("#day4-unit-button").on('click', function(val) {
+        if(bool){
+          units = 'C';
+          $('.unit-button').html("Metric");
+          $("#temp4").html(convertToC(forecastTemp4) + '&deg' + units);
+          $("#speed4").html('Winds: ' + convertToKMH(Math.round(speed)) + ' km/h');
+          bool = false;
+        } else {
+          units = 'F';
+          $('.unit-button').html("Imperial");
+          $("#temp4").html(forecastTemp4 + '&deg' + units);
+          $("#speed4").html('Winds: ' + Math.round(speed) + ' mph');
+          bool = true;
+        }
+      });
+        
+       $("#day5-unit-button").on('click', function(val) {
+        if(bool){
+          units = 'C';
+          $('.unit-button').html("Metric");
+          $("#temp5").html(convertToC(forecastTemp5) + '&deg' + units);
+          $("#speed5").html('Winds: ' + convertToKMH(Math.round(speed)) + ' km/h');
+          bool = false;
+        } else {
+          units = 'F';
+          $('.unit-button').html("Imperial");
+          $("#temp5").html(forecastTemp5 + '&deg' + units);
+          $("#speed5").html('Winds: ' + Math.round(speed) + ' mph');
+          bool = true;
+        }
+      });
+      
+        setCurrentWeatherVariables();
+        setCurrentDate();
+        setIcon(main);
+        setHTMLelements(1);
+        getForecastElements();
+        
+        }); // openweathermap forecastWeather JSON
+      }); //openweathermap currentWeather JSON
+    }); // freegeoip JSON
+    
+    /* Initialize Swiper */
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
+    
+  }); //document.ready function</script>

@@ -1,0 +1,98 @@
+<body>
+    <div class="preloader">
+        <div class="loader-section bg-center-section"></div>
+        <div class="preloader__cirecle">
+            <div class="circle">
+                <div class="inner"></div>
+            </div>
+            <div class="circle">
+                <div class="inner"></div>
+            </div>
+            <div class="circle">
+                <div class="inner"></div>
+            </div>
+            <div class="circle">
+                <div class="inner"></div>
+            </div>
+            <div class="circle">
+                <div class="inner"></div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+    <style>
+        .preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1050;
+
+	.loader-section {
+		position: fixed;
+		top: 0;
+		width: 51%;
+		height: 100%;
+		background: #ffffff;
+		z-index: 1050;
+
+		&.bg-center-section {
+			width: 100%;
+			background: black;
+			box-shadow: inset 0px 0px 90px rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+.preloader__cirecle {
+	width: 100px;
+	height: 102px;
+	border-radius: 100%;
+	position: absolute;
+	z-index: 1052;
+	top: 45%;
+	left: 50%;
+	margin-left: -50px;
+	animation: spin 5s infinite linear;
+
+	.circle {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+
+		.inner {
+			width: 100%;
+			height: 100%;
+			border-radius: 100%;
+			border: 5px solid rgba(240, 240, 240, 0.7);
+			border-right: none;
+			border-top: none;
+			background-clip: padding-box;
+			box-shadow: inset 0 0 10px rgba(240, 240, 240, 0.15);
+			box-sizing: content-box;
+			animation: spin 2s infinite linear;
+		}
+		&:nth-of-type(0) {
+			transform: rotate(0deg);
+		}
+		&:nth-of-type(1) {
+			transform: rotate(70deg);
+		}
+		&:nth-of-type(2) {
+			transform: rotate(140deg);
+		}
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+    </style>	
